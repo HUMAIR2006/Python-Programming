@@ -1,0 +1,36 @@
+# Get the number of entries from the user
+num_enter = int(input('Please write number of entries: '))
+
+# Initialize empty lists to store employee information
+per_name = []
+per_income = []
+per_tax = []
+
+# Loop to input data for each employee
+for i in range(num_enter):
+    print(f'\nEnter detail for employee {i+1}:')
+    
+    # Input name, salary, and tax for each employee
+    name = input('Enter Person Name: ').title()  # Capitalize the first letter of each word in the name
+    income = float(input('Enter Person salary: '))
+    tax = float(input('Enter Total Annual Tax Amount: '))
+
+    # Append the entered data to the respective lists
+    per_name.append(name)
+    per_income.append(income)
+    per_tax.append(tax)
+
+# Define column widths
+name_width = 15
+salaries_width = 15
+taxes_width = 15
+
+# Display header
+print(f'\n{"Name".ljust(name_width)}{"Income".ljust(salaries_width)}{"Tax".ljust(taxes_width)}')
+
+# Display employee information
+for name, income, tax2 in zip(per_name, per_income, per_tax):
+    print(f'{name.ljust(name_width)}{str(income).ljust(salaries_width)}{str(tax2).ljust(taxes_width)}')
+
+# Copyright notice
+print("\nCopyright © 2022 Humair Munir. All rights reserved.")
