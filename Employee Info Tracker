@@ -33,4 +33,4 @@ for name, income, tax2 in zip(per_name, per_income, per_tax):
     print(f'{name.ljust(name_width)}{str(income).ljust(salaries_width)}{str(tax2).ljust(taxes_width)}')
 
 # Copyright notice
-print("\nCopyright © 2022 Humair Munir. All rights reserved.")
+print("\nCopyright © 2024 Humair Munir. All rights reserved.")
